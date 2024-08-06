@@ -1,8 +1,10 @@
 *{
     margin: 0;
+    box-sizing: border-box;
 }
 body{
-    background-color: beige;
+    background-color: rgb(57, 57, 57);
+    color: rgb(252, 252, 252);
 }
 
 .container{
@@ -11,12 +13,16 @@ body{
     align-items: center;
     font-family: Arial, Helvetica, sans-serif;
     min-width: 100%;
-    min-height: 100%;
+    min-height: 100vh;
+    
 }
 .heading{
-    margin: 40px 0;
+    margin: 40px 40px;
     font-size: 0.8rem;
+    text-align: center;
+    width: 100%;
 }
+
 .moves{
     width: 50%;
     height: 5vh;
@@ -32,17 +38,95 @@ body{
 }
 .opt{
     margin: 20px 0;
-    background-color: silver;
-    border: 1px solid rgb(39, 39, 39);
+    background-color: rgb(235, 235, 235);
+    border: 1px solid rgb(20, 20, 20);
+    box-shadow: 1px 0px 8px #5f5f5ff9;
     width: 20%;
     height: 80%;
     border-radius: 5px;
+    cursor: pointer;
+    font-size: 20px;
+    transition: background-color 0.151s;
+    transition: color 0.15s;
 }
 
+.opt:hover{
+    background-color: rgb(77, 77, 77);
+    color: white;
+}
+
+.player,.computer{
+    display:flex;
+    gap:2px;
+}
 
 .scores{
     display: flex;
     justify-content: space-between;
     width: 40vw;
     font-size: 1.4rem;
+    margin-bottom: 50px;
+}
+
+.arena{
+    width: 80vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    border: 2px solid black;
+    line-height: 50px;
+    border-radius: 60px;
+    box-shadow: 2px 0px 15px rgba(0, 0, 0, 0.88);
+    font-size: 1.6rem;
+    background-color: rgba(249, 249, 249, 0.9);
+    color: black;
+    text-align: center;
+}
+
+#play-again{
+    width: 40%;
+    height: 5vh;
+    display: none;
+}
+
+
+@media (max-width:890px){
+    .moves{
+        width: 80%;
+    }
+    .scores{
+        width: 70%;
+    }
+    .opt:hover{
+        color: black;
+        background-color: rgb(235, 235, 235);
+    }
+    .opt:active{
+        background-color: rgb(77, 77, 77);
+        color: white;
+    }
+}
+
+@media (max-width:520px){
+    .moves{
+        width: 100%;
+    }
+    .opt{
+        width: 25%;
+        font-size: 16px;
+    }
+    .scores{
+        width: 90%;
+    }
+}
+
+@media (max-width:334px){
+    .scores{
+        font-size: 1.2rem;
+    }
+
+    .opt{
+        font-size: 14px;
+    }
 }
