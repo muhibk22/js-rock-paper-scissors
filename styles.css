@@ -125,6 +125,9 @@ body{
     .scores{
         width: 90%;
     }
+    .arena{
+        font-size: 1.3rem;
+    }
 }
 
 @media (max-width:334px){
