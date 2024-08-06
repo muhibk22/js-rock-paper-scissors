@@ -109,6 +109,9 @@ body{
     .container {
         height: 80vh;
     }
+    .arena {
+        height: 40vh;
+    }
 }
 
 @media (max-width:520px){
