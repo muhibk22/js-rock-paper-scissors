@@ -111,6 +111,7 @@ body{
     }
     .arena {
         height: 40vh;
+        line-height: 30px;
     }
 }
 
